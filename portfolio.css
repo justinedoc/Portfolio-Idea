@@ -38,19 +38,19 @@ body::-webkit-scrollbar {
 @media (prefers-reduced-motion: no-preference) {
 
     .scroll-watcher {
-        height: 100%;
-        position: fixed;
-        z-index: 1000;
-        width: 5px;
-        right: 0;
-        scale: 1 0;
-        animation: scroll-watcher linear;
-        animation-timeline: scroll(y);
-        transform-origin: top;
-        border-radius: 10px;
-        transition: 1s;
-        background: var(--secon-bg-color);
-    }
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    width: 5px;
+    right: 0;
+    scale: 1 0;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll(y);
+    transform-origin: top;
+    border-radius: 10px;
+    transition: 1s;
+    background: var(--secon-bg-color);
+}
 
     @keyframes scroll-watcher {
         to {
@@ -93,7 +93,10 @@ body::-webkit-scrollbar {
         }
     }
 
-    form {
+    .skill-left,
+    .skill-right,
+    form,
+    .portfolio-gallery {
         transform: translateY(60px);
         opacity: 0;
         animation: slide-in linear forwards;
