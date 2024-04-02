@@ -1294,6 +1294,17 @@ header ul .bx {
     .about-content p {
         display: block;
         font-size: 15px;
+        text-align: center;
+    }
+
+    .read-more-btn {
+        justify-self: center;
+        align-self: center;
+    }
+
+    .read-more-clicked .readmore-unclicked {
+        display: block;
+        text-align: center;
     }
 
     #service-section h2 {
@@ -1303,6 +1314,7 @@ header ul .bx {
     form {
         width: 90%;
     }
+
 }
 
 @media only screen and (max-width: 380px) {
@@ -1327,17 +1339,11 @@ header ul .bx {
         right: 0;
     }
 
-    .read-more-btn {
-        justify-self: center;
-        align-self: center;
+    .read-more-clicked-for-positioning .info-about3 {
+        bottom: 0%;
+        left: unset;
+        right: 0;
     }
 
-    .about-content p {
-        text-align: center;
-    }
 
-    .read-more-clicked .readmore-unclicked {
-        display: block;
-        text-align: center;
-    }
 }
