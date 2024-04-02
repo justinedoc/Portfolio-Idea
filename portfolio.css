@@ -10,18 +10,7 @@
 }
 
 body::-webkit-scrollbar {
-    width: 10px;
-    height: 20px;
-
-}
-
-body::-webkit-scrollbar-track {
-    background: var(--secon-bg-color);
-}
-
-body::-webkit-scrollbar-thumb {
-    background: var(--hover-color);
-    border-radius: 20px;
+    display: none;
 }
 
 .top {
@@ -42,6 +31,76 @@ body::-webkit-scrollbar-thumb {
     color: #000;
     font-size: 20px;
     font-weight: 600;
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+
+    .scroll-watcher {
+        height: 100%;
+        position: fixed;
+        z-index: 1000;
+        width: 5px;
+        right: 0;
+        scale: 1 0;
+        animation: scroll-watcher linear;
+        animation-timeline: scroll(y);
+        transform-origin: top;
+        border-radius: 10px;
+        transition: 1s;
+        background: var(--secon-bg-color);
+    }
+
+    @keyframes scroll-watcher {
+        to {
+            scale: 1 1;
+            border-radius: 20px;
+            background: var(--hover-color);
+        }
+    }
+
+    .about-content,
+    .service-box {
+        scale: .8;
+        opacity: 0;
+        animation: fade-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry;
+        animation-delay: .5s;
+    }
+
+    @keyframes fade-in {
+        to {
+            scale: 1;
+            opacity: 1;
+        }
+    }
+
+    .img-about {
+        transform: translateX(-30px);
+        opacity: 0;
+        animation: slide-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry;
+        transition: 1s;
+    }
+
+    @keyframes slide-in {
+        to {
+            transform: translate(0px);
+            opacity: 1;
+        }
+    }
+
+    form {
+        transform: translateY(60px);
+        opacity: 0;
+        animation: slide-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry;
+        transition: 1s;
+    }
 }
 
 
@@ -1319,7 +1378,7 @@ header ul .bx {
 
 @media only screen and (max-width: 380px) {
     section {
-        padding: 20px 20px;
+        padding: 0px 20px;
     }
 
     .info-about1 {
