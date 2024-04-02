@@ -13,100 +13,6 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-.top {
-    width: 50px;
-    height: 50px;
-    background: var(--hover-color);
-    border-radius: 10px 20px 10px 20px;
-    position: fixed;
-    bottom: 2%;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.top i {
-    transform: rotate(90deg);
-    color: #000;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-
-
-@media (prefers-reduced-motion: no-preference) {
-
-    .scroll-watcher {
-    height: 100%;
-    position: fixed;
-    z-index: 1000;
-    width: 5px;
-    right: 0;
-    scale: 1 0;
-    animation: scroll-watcher linear;
-    animation-timeline: scroll(y);
-    transform-origin: top;
-    border-radius: 10px;
-    transition: 1s;
-    background: var(--secon-bg-color);
-}
-
-    @keyframes scroll-watcher {
-        to {
-            scale: 1 1;
-            border-radius: 20px;
-            background: var(--hover-color);
-        }
-    }
-
-    .about-content,
-    .service-box {
-        scale: .8;
-        opacity: 0;
-        animation: fade-in linear forwards;
-        animation-timeline: view();
-        animation-range: entry;
-        animation-delay: .5s;
-    }
-
-    @keyframes fade-in {
-        to {
-            scale: 1;
-            opacity: 1;
-        }
-    }
-
-    .img-about {
-        transform: translateX(-30px);
-        opacity: 0;
-        animation: slide-in linear forwards;
-        animation-timeline: view();
-        animation-range: entry;
-        transition: 1s;
-    }
-
-    @keyframes slide-in {
-        to {
-            transform: translate(0px);
-            opacity: 1;
-        }
-    }
-
-    .skill-left,
-    .skill-right,
-    form,
-    .portfolio-gallery {
-        transform: translateY(60px);
-        opacity: 0;
-        animation: slide-in linear forwards;
-        animation-timeline: view();
-        animation-range: entry;
-        transition: 1s;
-    }
-}
-
-
 :root {
     --text-color: #f5f5f5;
     --hover-color: #12f7ff;
@@ -1381,7 +1287,8 @@ header ul .bx {
 
 @media only screen and (max-width: 380px) {
     section {
-        padding: 0px 20px;
+        padding: 20px 20px;
+        margin-top: 25px;
     }
 
     .info-about1 {
@@ -1408,4 +1315,98 @@ header ul .bx {
     }
 
 
+}
+
+
+.top {
+    width: 50px;
+    height: 50px;
+    background: var(--hover-color);
+    border-radius: 10px 20px 10px 20px;
+    position: fixed;
+    bottom: 2%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top i {
+    transform: rotate(90deg);
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+
+    .scroll-watcher {
+        height: 100%;
+        position: fixed;
+        z-index: 1000;
+        width: 5px;
+        right: 0;
+        scale: 1 0;
+        animation: scroll-watcher linear;
+        animation-timeline: scroll(y);
+        transform-origin: top;
+        border-radius: 10px;
+        transition: 1s;
+        background: var(--secon-bg-color);
+    }
+
+    @keyframes scroll-watcher {
+        to {
+            scale: 1 1;
+            border-radius: 20px;
+            background: var(--hover-color);
+        }
+    }
+
+    .about-content,
+    .service-box {
+        scale: .8;
+        opacity: 0;
+        animation: fade-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry;
+        animation-delay: .5s;
+    }
+
+    @keyframes fade-in {
+        to {
+            scale: 1;
+            opacity: 1;
+        }
+    }
+
+    .img-about {
+        transform: translateX(-30px);
+        opacity: 0;
+        animation: slide-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry;
+        transition: 1s;
+    }
+
+    @keyframes slide-in {
+        to {
+            transform: translate(0px);
+            opacity: 1;
+        }
+    }
+
+    .skill-left,
+    .skill-right,
+    form,
+    .portfolio-gallery {
+        transform: translateY(60px);
+        opacity: 0;
+        animation: slide-in linear forwards;
+        animation-timeline: view();
+        animation-range: entry;
+        transition: 1s;
+    }
 }
