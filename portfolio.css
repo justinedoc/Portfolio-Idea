@@ -9,6 +9,42 @@
     scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 20px;
+
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--secon-bg-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--hover-color);
+    border-radius: 20px;
+}
+
+.top {
+    width: 50px;
+    height: 50px;
+    background: var(--hover-color);
+    border-radius: 10px 20px 10px 20px;
+    position: fixed;
+    bottom: 2%;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top i {
+    transform: rotate(90deg);
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
 :root {
     --text-color: #f5f5f5;
     --hover-color: #12f7ff;
@@ -33,9 +69,9 @@ header {
     justify-content: space-between;
     width: 100%;
     padding: 30px 10%;
-    /* position: sticky;
+    position: sticky;
     top: 0;
-    z-index: 9999999; */
+    z-index: 999;
     background-color: var(--bg-color);
 }
 
@@ -137,10 +173,6 @@ section {
     position: absolute;
     display: flex;
     opacity: 0;
-}
-
-body::-webkit-scrollbar {
-    display: none;
 }
 
 .change-text h3 .word .letter {
