@@ -1383,7 +1383,7 @@ header ul .bx {
     }
 
     .img-about {
-        transform: translateX(-30px);
+        transform: translateY(60px);
         opacity: 0;
         animation: slide-in linear forwards;
         animation-timeline: view();
