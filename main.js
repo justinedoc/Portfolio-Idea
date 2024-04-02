@@ -15,3 +15,21 @@ readMoreBtn.addEventListener("click", () => {
     }
     aboutSection.classList.toggle("read-more-clicked-for-positioning");
 });
+
+
+
+// Navbar
+
+const nav = document.querySelector(".navlist");
+const menuBtn = document.getElementById("menu-icon");
+const closeBtn = document.getElementById("closeBtn");
+
+menuBtn.addEventListener("click", () => {
+    nav.classList.add("active");
+})
+
+function closeNav() {
+    nav.classList.remove("active");
+}
+closeBtn.addEventListener("click", closeNav)
+
